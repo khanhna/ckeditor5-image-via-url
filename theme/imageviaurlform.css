@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ */
+
+@import "@ckeditor/ckeditor5-ui/theme/mixins/_rwd.css";
+
+.ck.ck-imageviaurl-form {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 6px;
+
+	& .ck-labeled-input {
+		display: inline-block;
+	}
+
+	& .ck-label {
+		display: none;
+	}
+
+	& .ck-button-margin {
+		margin-left: 6px;
+	}
+
+	@mixin ck-imageviaurl-phone {
+		flex-wrap: wrap;
+
+		& .ck-labeled-input {
+			flex-basis: 100%;
+		}
+
+		& .ck-button {
+			flex-basis: 50%;
+		}
+	}
+}
